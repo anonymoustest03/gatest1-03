@@ -12,7 +12,7 @@ on:
 jobs:  
 
   job_1:
-    runs-on:  ubuntu-latest #arc-runner-set-server #  -server
+    runs-on:  arc-runner-set #arc-runner-set #  -server
     steps:
           
       - name: Run CPU stress
@@ -21,7 +21,7 @@ jobs:
           stress --cpu 5 --timeout 1800s
          
   job_2:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -42,7 +42,7 @@ jobs:
 
 
   job_3:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -57,7 +57,7 @@ jobs:
           stress --cpu 128 --timeout 1800s
 
   job_4:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -74,7 +74,7 @@ jobs:
  
 
   job_5:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -90,7 +90,7 @@ jobs:
           
 
   job_6:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -106,7 +106,7 @@ jobs:
   
 
   job_7:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -122,7 +122,7 @@ jobs:
  
 
   job_8:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -138,7 +138,7 @@ jobs:
   
 
   job_9:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -153,7 +153,7 @@ jobs:
           stress --cpu 128 --timeout 1800s
  
   job_10:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -169,7 +169,7 @@ jobs:
  
 
   job_11:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -185,7 +185,7 @@ jobs:
 
 
   job_12:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -201,7 +201,7 @@ jobs:
 
 
   job_13:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -217,7 +217,7 @@ jobs:
 
 
   job_14:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -232,7 +232,7 @@ jobs:
           stress --cpu 128 --timeout 1800s
 
   job_15:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -247,7 +247,7 @@ jobs:
           stress --cpu 128 --timeout 1800s
 
   job_16:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -263,7 +263,7 @@ jobs:
 
 
   job_17:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -279,7 +279,7 @@ jobs:
       
 
   job_18:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -297,7 +297,7 @@ jobs:
       #   run: sleep 2400
 
   job_19:
-    runs-on:  arc-runner-set-server
+    runs-on:  arc-runner-set
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -315,7 +315,7 @@ jobs:
       #   run: sleep 2400
 
 # job_20:
-#   runs-on:  arc-runner-set-server
+#   runs-on:  arc-runner-set
 #   steps:
 #     - name: Checkout code
 #       uses: actions/checkout@v3

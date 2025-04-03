@@ -1,0 +1,69 @@
+name: Compile Job
+
+on: 
+  push: 
+    branches:
+      - main
+  # pull_request:
+  #   branches: 
+  #     - main
+
+jobs:
+  build:
+    runs-on: arc-runner-set #arc-runner-set-server  #arc-runner-set-c54x #
+
+    steps:
+      # - name: Print Runner System Information
+      #   run: |
+      #     echo "CPU Information:"
+      #     lscpu
+          
+      #     echo "Memory Information:"
+      #     free -h
+          
+      #     echo "Number of CPU Cores:"
+      #     nproc
+          
+      #     echo "Public IP Address:"
+      #     curl -s ifconfig.me
+          
+      #     echo "Private IP Address:"
+      #     hostname -I
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential 
+    
+      - name: Download repository (single branch)
+        run: |
+          git clone --single-branch --branch master https://github.com/sqlite/sqlite.git
+          cd sqlite
+          ./configure
+      - name: Verify Compilation
+        run: |
+          cd sqlite
+          if [ -f ./sqlite3 ]; then
+            echo "SQLite compiled successfully."
+            ./sqlite3 --version
+          else
+            echo "SQLite compilation failed."
+          fi
+      
+      - name: Record compilation time
+        run: |
+          START_TIME=$(date +%s)
+          cd sqlite
+          make #> /dev/null 2>&1
+          END_TIME=$(date +%s)
+          COMPILATION_TIME=$((END_TIME - START_TIME))
+          echo "Compilation time: $COMPILATION_TIME seconds"
+          
+      - name: Verify Compilation
+        run: |
+          cd sqlite
+          if [ -f ./sqlite3 ]; then
+            echo "SQLite compiled successfully."
+            ./sqlite3 --version
+          else
+            echo "SQLite compilation failed."
+          fi

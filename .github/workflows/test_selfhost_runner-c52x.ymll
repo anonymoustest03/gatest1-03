@@ -1,5 +1,5 @@
 name: Block runner c52x
-run-name: ${{ github.actor }} is making PR or Push
+run-name: Block runner c52x
 on:  
   pull_request:  
     types: [opened, synchronize, reopened]

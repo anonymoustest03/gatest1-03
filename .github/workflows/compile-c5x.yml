@@ -1,7 +1,7 @@
 name: Compile Job c5x
   
 on: 
-  push: 
+  push:  
     branches:  
       - main 
   # pull_request:

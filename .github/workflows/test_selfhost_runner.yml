@@ -1,5 +1,5 @@
-name: Actions Runner Controller Demo 
-run-name: ${{ github.actor }} is making PR or Push
+name: block runner c5x
+run-name: block runner c5x
 on:  
   pull_request:  
     types: [opened, synchronize, reopened]

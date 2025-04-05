@@ -1,6 +1,6 @@
 name: Block runner c52x
 run-name: Block runner c52x
-on:  
+on:   
   pull_request:  
     types: [opened, synchronize, reopened]
     branches:  

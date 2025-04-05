@@ -18,7 +18,7 @@ jobs:
       - name: Run CPU stress
         run: |
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
          
   job_2:
     runs-on:  arc-runner-set-c52x
@@ -34,7 +34,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
           
        # - name: sleeping job
        #   run: |
@@ -54,7 +54,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
   job_4:
     runs-on:  arc-runner-set-c52x
@@ -70,7 +70,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
  
 
   job_5:
@@ -86,7 +86,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
           
 
   job_6:
@@ -102,7 +102,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
   
 
   job_7:
@@ -118,7 +118,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
  
 
   job_8:
@@ -134,7 +134,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
   
 
   job_9:
@@ -150,7 +150,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
  
   job_10:
     runs-on:  arc-runner-set-c52x
@@ -165,7 +165,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
  
 
   job_11:
@@ -181,7 +181,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
 
   job_12:
@@ -197,7 +197,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
 
   job_13:
@@ -213,7 +213,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
 
   job_14:
@@ -229,7 +229,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
   job_15:
     runs-on:  arc-runner-set-c52x
@@ -244,7 +244,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
   job_16:
     runs-on:  arc-runner-set-c52x
@@ -259,7 +259,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
 
   job_17:
@@ -275,7 +275,7 @@ jobs:
       - name: Run CPU stress
         run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
       
 
   job_18:
@@ -291,7 +291,7 @@ jobs:
       - name: Run CPU stress
         run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
       # - name: Sleep
       #   run: sleep 2400
@@ -309,7 +309,7 @@ jobs:
       - name: Run CPU stress
         run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 64 --timeout 1800s
+          stress --cpu 8 --timeout 1800s
 
       # - name: Sleep
       #   run: sleep 2400

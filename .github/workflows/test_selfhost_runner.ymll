@@ -12,16 +12,16 @@ on:
 jobs:  
 
   job_1:
-    runs-on:  arc-runner-set-c54x #arc-runner-set-c54x #  -server
+    runs-on:  arc-runner-set-c5x #arc-runner-set-c5x #  -server
     steps:
           
       - name: Run CPU stress
         run: |
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
          
   job_2:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -34,7 +34,7 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
           
        # - name: sleeping job
        #   run: |
@@ -42,7 +42,7 @@ jobs:
 
 
   job_3:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -54,10 +54,10 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
   job_4:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -70,11 +70,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
  
 
   job_5:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -86,11 +86,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
           
 
   job_6:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -102,11 +102,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
   
 
   job_7:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -118,11 +118,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
  
 
   job_8:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -134,11 +134,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
   
 
   job_9:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -150,10 +150,10 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
  
   job_10:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -165,11 +165,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
  
 
   job_11:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -181,11 +181,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
 
   job_12:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -197,11 +197,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
 
   job_13:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -213,11 +213,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
 
   job_14:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -229,10 +229,10 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
   job_15:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -244,10 +244,10 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
   job_16:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -259,11 +259,11 @@ jobs:
        - name: Run CPU stress
          run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
 
   job_17:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -275,11 +275,11 @@ jobs:
       - name: Run CPU stress
         run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
       
 
   job_18:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -291,13 +291,13 @@ jobs:
       - name: Run CPU stress
         run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
       # - name: Sleep
       #   run: sleep 2400
 
   job_19:
-    runs-on:  arc-runner-set-c54x
+    runs-on:  arc-runner-set-c5x
     steps:
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -309,13 +309,13 @@ jobs:
       - name: Run CPU stress
         run: |         
           sudo apt-get update && sudo apt-get install -y stress
-          stress --cpu 128 --timeout 1800s
+          stress --cpu 32 --timeout 1800s
 
       # - name: Sleep
       #   run: sleep 2400
 
 # job_20:
-#   runs-on:  arc-runner-set-c54x
+#   runs-on:  arc-runner-set-c5x
 #   steps:
 #     - name: Checkout code
 #       uses: actions/checkout@v3

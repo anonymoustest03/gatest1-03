@@ -1,7 +1,12 @@
 # Use the latest 2.1 version of CircleCI pipeline process engine.
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1 
-  
+
+parameters:
+    temp:
+        type: boolean
+        default: true
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:   
@@ -53,8 +58,10 @@ workflows:
   say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     when:
-            and:
-                 equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
+      equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
+      # and:
+      #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
+      #      - <<pipeline.parameters.nightly>>
     jobs:
       - sleep
       # - cpu-stress-test

@@ -3,6 +3,7 @@ pipeline {
     agent {  
         docker {
             image 'ubuntu:22.04'
+            args '-u root'
         }
     }
  

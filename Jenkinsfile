@@ -1,11 +1,27 @@
-pipeline { 
+pipeline {
     agent any
 
     stages {
-        stage('Hello World') {
-            steps {
-                echo 'Hello, world from Jenkins on repo from forkkk!'
-                sh 'sleep 20'
+        stage('Run Concurrent Jobs') {
+            parallel {
+                stage('Job 1') {
+                    steps {
+                        echo 'Running Job 1'
+                        sh 'sleep 25'
+                    }
+                }
+                stage('Job 2') {
+                    steps {
+                        echo 'Running Job 2'
+                        sh 'sleep 25'
+                    }
+                }
+                stage('Job 3') {
+                    steps {
+                        echo 'Running Job 3'
+                        sh 'sleep 25'
+                    }
+                }
             }
         }
     }

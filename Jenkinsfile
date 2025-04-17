@@ -16,14 +16,14 @@ pipeline {
     // }
 
     stages {
-    //     stage('Install dependencies') {
-    //         steps {
-    //             sh '''
-    //                 sudo apt-get update
-    //                 sudo apt-get install -y build-essential
-    //             '''
-    //         }
-    //     }
+        stage('Install dependencies') {
+            steps {
+                sh '''
+                    sudo apt-get update
+                    sudo apt-get install -y build-essential
+                '''
+            }
+        }
 
         stage('Download repository (single branch)') {
             steps {

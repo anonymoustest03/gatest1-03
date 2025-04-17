@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Hello World') {
             steps {
-                echo 'Hello, world from Jenkins on repo from fork!'
-                sh 'sleep 15'
+                echo 'Hello, world from Jenkins on repo from forkkk!'
+                sh 'sleep 20'
             }
         }
     }

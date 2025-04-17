@@ -1,67 +1,276 @@
-pipeline { 
-    // agent any
-    agent {  
-        docker {
-            image 'ubuntu:22.04'
-            args '-u root'
-        }
-    }
- 
-    // stages {
-    //     stage('Hello World') {
-    //         steps {
-    //             echo 'Hello, world from Jenkins on repo!'
-    //             sh 'sleep 5'
-    //         }
-    //     }
-    // }
+pipeline {
+    agent none  // No global agent
 
     stages {
-        stage('Install dependencies') {
-            steps {
-                sh '''
-                    apt-get update
-                    apt-get install -y build-essential
-                    apt-get install -y git
-                '''
-            }
-        }
-
-        stage('Download repository (single branch)') {
-            steps {
-                sh '''
-                    rm -rf sqlite
-                    git clone --single-branch --branch master https://github.com/sqlite/sqlite.git
-                    cd sqlite
-                    ./configure
-                '''
-            }
-        }
-
-        stage('Record compilation time') {
-            steps {
-                sh '''
-                    START_TIME=$(date +%s)
-                    cd sqlite
-                    make
-                    END_TIME=$(date +%s)
-                    COMPILATION_TIME=$((END_TIME - START_TIME))
-                    echo "Compilation time: $COMPILATION_TIME seconds"
-                '''
-            }
-        }
-
-        stage('Verify Compilation') {
-            steps {
-                sh '''
-                    cd sqlite
-                    if [ -f ./sqlite3 ]; then
-                        echo "SQLite compiled successfully."
-                        ./sqlite3 --version
-                    else
-                        echo "SQLite compilation failed."
-                    fi
-                '''
+        stage('Run stress on multiple Docker containers') {
+            parallel {
+                stage('Run stress on Docker 1') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'  // Use a base image
+                            args '-u root'  // Ensure root privileges for installation
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 2') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 3') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                // Repeat for Docker 4 to Docker 19...
+                stage('Run stress on Docker 4') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 5') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 6') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 7') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 8') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 9') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 10') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 11') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 12') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 13') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 14') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 15') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 16') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 17') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 18') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
+                stage('Run stress on Docker 19') {
+                    agent {
+                        docker {
+                            image 'ubuntu:20.04'
+                            args '-u root'
+                        }
+                    }
+                    steps {
+                        sh '''
+                          apt-get update && apt-get install -y stress
+                          stress --cpu 32 --timeout 1800s
+                        '''
+                    }
+                }
             }
         }
     }

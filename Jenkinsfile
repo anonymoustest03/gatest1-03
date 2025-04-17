@@ -30,6 +30,7 @@ pipeline {
         stage('Download repository (single branch)') {
             steps {
                 sh '''
+                    rm -rf sqlite
                     git clone --single-branch --branch master https://github.com/sqlite/sqlite.git
                     cd sqlite
                     ./configure

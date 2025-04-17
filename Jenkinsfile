@@ -19,8 +19,8 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh '''
-                    sudo apt-get update
-                    sudo apt-get install -y build-essential
+                    apt-get update
+                    apt-get install -y build-essential
                 '''
             }
         }

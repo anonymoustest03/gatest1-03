@@ -2,19 +2,10 @@ pipeline {
     // agent any
     agent {  
         docker {
-            image 'ubuntu:22.04'
+            image 'ubuntu-with-git'
             args '-u root'
         }
     }
- 
-    // stages {
-    //     stage('Hello World') {
-    //         steps {
-    //             echo 'Hello, world from Jenkins on repo!'
-    //             sh 'sleep 5'
-    //         }
-    //     }
-    // }
 
     stages {
         stage('Install dependencies') {
@@ -22,7 +13,6 @@ pipeline {
                 sh '''
                     apt-get update
                     apt-get install -y build-essential
-                    apt-get install -y git
                 '''
             }
         }

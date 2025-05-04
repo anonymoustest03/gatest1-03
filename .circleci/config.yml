@@ -68,9 +68,9 @@ workflows:
 
   say-hello-workflow_from_fork: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
-    when:
-            not:
-                 equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
+    # when:
+            # not:
+                 # equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
     jobs:
       - sleep_2
       # - cpu-stress-test

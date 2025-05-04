@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 10"
+          command: "sleep 15"
 
   sleep_2:
     docker:

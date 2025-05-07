@@ -13,26 +13,108 @@ jobs:
   sleep:
     docker:
       - image: cimg/base:current
-    # resource_class: large
+    resource_class: small
     # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 20"
+          command: "sleep 10"
 
-  sleep_2:
+  sleep_1:
     docker:
       - image: cimg/base:current
-    # resource_class: large
+    resource_class: small
     # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "sleep a while for fork repo"
-          command: "sleep 2"
+          name: "Sleep for 6 hours"
+          command: |
+            for i in $(seq 1 360); do
+              echo "Sleeping minute $i..."
+              sleep 60
+            done
+  sleep_2:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    # Add steps to the job
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 6 hours"
+          command: |
+            for i in $(seq 1 360); do
+              echo "Sleeping minute $i..."
+              sleep 60
+            done
+  sleep_3:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    # Add steps to the job
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 6 hours"
+          command: |
+            for i in $(seq 1 360); do
+              echo "Sleeping minute $i..."
+              sleep 60
+            done
+
+  sleep_4:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    # Add steps to the job
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 6 hours"
+          command: |
+            for i in $(seq 1 360); do
+              echo "Sleeping minute $i..."
+              sleep 60
+            done
+
+  sleep_5:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    # Add steps to the job
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 6 hours"
+          command: |
+            for i in $(seq 1 360); do
+              echo "Sleeping minute $i..."
+              sleep 60
+            done
+
+  sleep_6:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    # Add steps to the job
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 6 hours"
+          command: |
+            for i in $(seq 1 360); do
+              echo "Sleeping minute $i..."
+              sleep 60
+            done
 
   cpu-stress-test:
     docker:
@@ -55,25 +137,39 @@ jobs:
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
 
-  say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
+  # say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
-    when:
-      equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
+    # when:
+      # equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       # and:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>>
-    jobs:
-      - sleep
+    # jobs:
+      # - sleep
       # - cpu-stress-test
 
-  say-hello-workflow_from_fork: # This is the name of the workflow, feel free to change it to better match your workflow.
+  say-hello-workflow_24h: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
-    when:
-            not:
-                 equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
+    # when:
+    #         not:
+    #              equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
     jobs:
-      - sleep_2
-      # - cpu-stress-test
+      - sleep_1
+      - sleep_2:
+          requires:
+            - sleep_1
+      - sleep_3:
+          requires:
+            - sleep_2
+      - sleep_4:
+          requires:
+            - sleep_3
+      - sleep_5:
+          requires:
+            - sleep_4
+      - sleep_6:
+          requires:
+            - sleep_5
 
 # workflows:
 #   say-hello-workflow:
@@ -92,6 +188,3 @@ workflows:
 #             pull_requests:
 #               only:
 #                 - /.*/
-
-
-

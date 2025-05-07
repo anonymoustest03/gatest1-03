@@ -13,7 +13,7 @@ jobs:
   sleep:
     docker:
       - image: cimg/base:current
-    # resource_class: large
+    resource_class: xlarge
     # Add steps to the job
     steps:
       # Checkout the code as the first step.
@@ -72,13 +72,13 @@ workflows:
       - sleep
       # - cpu-stress-test
 
-  say-hello-workflow_12h: # This is the name of the workflow, feel free to change it to better match your workflow.
+  # say-hello-workflow_12h: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     # when:
             # not:
                  # equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
-    jobs:
-      - sleep_2
+    # jobs:
+      # - sleep_2
       # - cpu-stress-test
 
 # workflows:

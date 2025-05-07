@@ -145,7 +145,7 @@ workflows:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>>
     # jobs:
-      - sleep
+      # - sleep
       # - cpu-stress-test
 
   say-hello-workflow_24h: # This is the name of the workflow, feel free to change it to better match your workflow.

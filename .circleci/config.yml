@@ -31,9 +31,9 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "Sleep for 6 hours"
+          name: "Sleep for 3 hours"
           command: |
-            for i in $(seq 1 360); do
+            for i in $(seq 1 180); do
               echo "Sleeping minute $i..."
               sleep 60
             done
@@ -48,7 +48,7 @@ jobs:
       - run:
           name: "Sleep for 6 hours"
           command: |
-            for i in $(seq 1 360); do
+            for i in $(seq 1 180); do
               echo "Sleeping minute $i..."
               sleep 60
             done
@@ -63,7 +63,7 @@ jobs:
       - run:
           name: "Sleep for 6 hours"
           command: |
-            for i in $(seq 1 360); do
+            for i in $(seq 1 180); do
               echo "Sleeping minute $i..."
               sleep 60
             done
@@ -79,7 +79,7 @@ jobs:
       - run:
           name: "Sleep for 6 hours"
           command: |
-            for i in $(seq 1 360); do
+            for i in $(seq 1 180); do
               echo "Sleeping minute $i..."
               sleep 60
             done
@@ -95,7 +95,7 @@ jobs:
       - run:
           name: "Sleep for 6 hours"
           command: |
-            for i in $(seq 1 360); do
+            for i in $(seq 1 180); do
               echo "Sleeping minute $i..."
               sleep 60
             done
@@ -111,7 +111,7 @@ jobs:
       - run:
           name: "Sleep for 6 hours"
           command: |
-            for i in $(seq 1 360); do
+            for i in $(seq 1 180); do
               echo "Sleeping minute $i..."
               sleep 60
             done

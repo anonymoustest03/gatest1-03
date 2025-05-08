@@ -26,96 +26,368 @@ jobs:
     docker:
       - image: cimg/base:current
     resource_class: small
-    # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
           name: "Sleep for 3 hours"
-          command: |
-            for i in $(seq 1 180); do
-              echo "Sleeping minute $i..."
-              sleep 60
-            done
+          command: sleep 30
+           
   sleep_2:
     docker:
       - image: cimg/base:current
     resource_class: small
-    # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "Sleep for 6 hours"
-          command: |
-            for i in $(seq 1 180); do
-              echo "Sleeping minute $i..."
-              sleep 60
-            done
+          name: "Sleep for 3 hours"
+          command: sleep 30
   sleep_3:
     docker:
       - image: cimg/base:current
     resource_class: small
-    # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "Sleep for 6 hours"
-          command: |
-            for i in $(seq 1 180); do
-              echo "Sleeping minute $i..."
-              sleep 60
-            done
+          name: "Sleep for 3 hours"
+          command: sleep 30
 
   sleep_4:
     docker:
       - image: cimg/base:current
     resource_class: small
-    # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "Sleep for 6 hours"
-          command: |
-            for i in $(seq 1 180); do
-              echo "Sleeping minute $i..."
-              sleep 60
-            done
+          name: "Sleep for 3 hours"
+          command: sleep 30
 
   sleep_5:
     docker:
       - image: cimg/base:current
     resource_class: small
-    # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "Sleep for 6 hours"
-          command: |
-            for i in $(seq 1 180); do
-              echo "Sleeping minute $i..."
-              sleep 60
-            done
+          name: "Sleep for 3 hours"
+          command: sleep 30
 
   sleep_6:
     docker:
       - image: cimg/base:current
     resource_class: small
-    # Add steps to the job
     steps:
       # Checkout the code as the first step.
       - checkout
       - run:
-          name: "Sleep for 6 hours"
-          command: |
-            for i in $(seq 1 180); do
-              echo "Sleeping minute $i..."
-              sleep 60
-            done
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_7:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
 
+  sleep_8:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_9:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_10:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_11:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+           
+  sleep_12:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_13:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_14:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_15:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_16:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_17:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_18:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_19:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_20:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_21:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+           
+  sleep_22:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_23:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_24:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_25:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_26:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_27:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_28:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_29:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_30:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_31:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+           
+  sleep_32:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+  sleep_33:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+
+  sleep_34:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "Sleep for 3 hours"
+          command: sleep 30
+          
   cpu-stress-test:
     docker:
       - image: cimg/base:current
@@ -155,21 +427,40 @@ workflows:
     #              equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
     jobs:
       - sleep_1
-      - sleep_2:
-          requires:
-            - sleep_1
-      - sleep_3:
-          requires:
-            - sleep_2
-      - sleep_4:
-          requires:
-            - sleep_3
-      - sleep_5:
-          requires:
-            - sleep_4
-      - sleep_6:
-          requires:
-            - sleep_5
+      - sleep_2
+      - sleep_3
+      - sleep_4
+      - sleep_5
+      - sleep_6
+      - sleep_7
+      - sleep_8
+      - sleep_9
+      - sleep_10
+      - sleep_11
+      - sleep_12
+      - sleep_13
+      - sleep_14
+      - sleep_15
+      - sleep_16
+      - sleep_17
+      - sleep_18
+      - sleep_19
+      - sleep_20
+      - sleep_21
+      - sleep_22
+      - sleep_23
+      - sleep_24
+      - sleep_25
+      - sleep_26
+      - sleep_27
+      - sleep_28
+      - sleep_29
+      - sleep_30
+      - sleep_31
+      - sleep_32
+      - sleep_33
+      - sleep_34
+
 
 # workflows:
 #   say-hello-workflow:

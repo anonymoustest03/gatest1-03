@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: arc-runner-set-c5x #arc-runner-set-server  #arc-runner-set-c54x #
+    runs-on: arc-runner-set-c52x #arc-runner-set-server  #arc-runner-set-c54x #
 
     steps:
       # - name: Print Runner System Information

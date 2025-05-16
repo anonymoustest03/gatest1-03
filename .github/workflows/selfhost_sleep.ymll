@@ -1,0 +1,187 @@
+name: block runner c5x
+run-name: block runner c5x
+on:  
+  pull_request:  
+    types: [opened, synchronize, reopened]
+    branches:  
+      - main 
+  push:
+    branches:
+      - main
+  
+jobs:  
+
+  job_1:
+    runs-on:  arc-runner-set-c5x #arc-runner-set-c5x #  -server
+    steps:
+          
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+         
+  job_2:
+    runs-on:  arc-runner-set-c5x
+    steps:
+          
+       - name: sleeping job
+         run: |
+           sleep 259200
+
+
+  job_3:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+
+  job_4:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+  job_5:
+    runs-on:  arc-runner-set-c5x
+    steps:
+       - name: sleeping job
+         run: |
+             sleep 259200
+  job_6:
+    runs-on:  arc-runner-set-c5x #arc-runner-set-c5x #  -server
+    steps:
+          
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+         
+  job_7:
+    runs-on:  arc-runner-set-c5x
+    steps:
+          
+       - name: sleeping job
+         run: |
+           sleep 259200
+
+
+  job_8:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+
+  job_9:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+  job_10:
+    runs-on:  arc-runner-set-c5x
+    steps:
+       - name: sleeping job
+         run: |
+             sleep 259200
+
+  job_11:
+  runs-on:  arc-runner-set-c5x #arc-runner-set-c5x #  -server
+  steps:
+        
+    - name: sleeping job
+      run: |
+         sleep 259200
+
+         
+  job_12:
+    runs-on:  arc-runner-set-c5x
+    steps:
+          
+       - name: sleeping job
+         run: |
+           sleep 259200
+
+
+  job_13:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+
+  job_14:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+  job_15:
+    runs-on:  arc-runner-set-c5x
+    steps:
+       - name: sleeping job
+         run: |
+             sleep 259200
+  job_16:
+    runs-on:  arc-runner-set-c5x #arc-runner-set-c5x #  -server
+    steps:
+          
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+         
+  job_17:
+    runs-on:  arc-runner-set-c5x
+    steps:
+          
+       - name: sleeping job
+         run: |
+           sleep 259200
+
+
+  job_18:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+
+  job_19:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+  job_20:
+    runs-on:  arc-runner-set-c5x
+    steps:
+       - name: sleeping job
+         run: |
+             sleep 259200
+
+  job_21:
+    runs-on:  arc-runner-set-c5x
+    steps:
+      - name: sleeping job
+        run: |
+           sleep 259200
+
+  job_22:
+    runs-on:  arc-runner-set-c5x
+    steps:
+       - name: sleeping job
+         run: |
+             sleep 259200
+          
+
+ 

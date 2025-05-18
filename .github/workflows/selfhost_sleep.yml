@@ -1,0 +1,30 @@
+name: block runner c5x with sequential dependencies
+run-name: block runner c5x - parallel then sequential
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  # Original 22 jobs, now sleeping for 5 minutes
+  job_1:
+    runs-on: arc-runner-set-c5x
+    steps:
+      - name: Sleeping job 1 for 5 minutes
+        run: |
+          echo "Job 1 starting sleep for 300 seconds"
+          sleep 3600
+          echo "Job 1 finished sleeping"
+
+  
+
+
+
+
+ 
+
+

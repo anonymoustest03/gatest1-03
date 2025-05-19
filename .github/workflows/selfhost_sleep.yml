@@ -11,7 +11,7 @@ on:
 
 jobs:
   # Original 22 jobs, now sleeping for 5 minutes
-  job_1:
+  job_1: 
     runs-on: arc-runner-set-c5x
     steps:
       - name: Sleeping job 1 for 5 minutes

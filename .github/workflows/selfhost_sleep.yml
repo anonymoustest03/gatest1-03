@@ -11,13 +11,13 @@ on:
 
 jobs:
   # Original 22 jobs, now sleeping for 5 minutes
-  job_main_branch:
+  job_main_branch_123:
     runs-on: arc-runner-set-c5x
     steps:
       - name: Job from main
         run: |
           echo "Job from main"
-          sleep 40
+          sleep 60
           echo "Job 1 finished sleeping"
 
   # job_2:

@@ -32,7 +32,7 @@ jobs:
 
       - name: Simple sleep 
         run: |
-          sleep 600
+          sleep 100
           
       # - name: Install dependencies
       #   run: |

@@ -193,7 +193,7 @@ jobs:
 
   job_21:
     runs-on: arc-runner-set-c5x
-    needs: [job_1]
+    needs: [job_1_fork]
     steps:
       - name: Sleeping job 21 for 5 minutes
         run: |

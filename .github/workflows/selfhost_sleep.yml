@@ -17,7 +17,7 @@ jobs:
       - name: Sleeping job 1 for 5 minutes
         run: |
           echo "Job 1 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 1 finished sleeping"
 
   job_2:
@@ -26,7 +26,7 @@ jobs:
       - name: Sleeping job 2 for 5 minutes
         run: |
           echo "Job 2 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 2 finished sleeping"
 
   job_3:
@@ -35,7 +35,7 @@ jobs:
       - name: Sleeping job 3 for 5 minutes
         run: |
           echo "Job 3 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 3 finished sleeping"
 
   job_4:
@@ -44,7 +44,7 @@ jobs:
       - name: Sleeping job 4 for 5 minutes
         run: |
           echo "Job 4 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 4 finished sleeping"
 
   job_5:
@@ -53,7 +53,7 @@ jobs:
       - name: Sleeping job 5 for 5 minutes
         run: |
           echo "Job 5 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 5 finished sleeping"
 
   job_6:
@@ -62,7 +62,7 @@ jobs:
       - name: Sleeping job 6 for 5 minutes
         run: |
           echo "Job 6 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 6 finished sleeping"
 
   job_7:
@@ -71,7 +71,7 @@ jobs:
       - name: Sleeping job 7 for 5 minutes
         run: |
           echo "Job 7 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 7 finished sleeping"
 
   job_8:
@@ -80,7 +80,7 @@ jobs:
       - name: Sleeping job 8 for 5 minutes
         run: |
           echo "Job 8 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 8 finished sleeping"
 
   job_9:
@@ -89,7 +89,7 @@ jobs:
       - name: Sleeping job 9 for 5 minutes
         run: |
           echo "Job 9 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 9 finished sleeping"
 
   job_10:
@@ -98,7 +98,7 @@ jobs:
       - name: Sleeping job 10 for 5 minutes
         run: |
           echo "Job 10 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 10 finished sleeping"
 
   job_11:
@@ -107,7 +107,7 @@ jobs:
       - name: Sleeping job 11 for 5 minutes
         run: |
           echo "Job 11 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 11 finished sleeping"
 
   job_12:
@@ -116,7 +116,7 @@ jobs:
       - name: Sleeping job 12 for 5 minutes
         run: |
           echo "Job 12 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 12 finished sleeping"
 
   job_13:
@@ -125,7 +125,7 @@ jobs:
       - name: Sleeping job 13 for 5 minutes
         run: |
           echo "Job 13 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 13 finished sleeping"
 
   job_14:
@@ -134,7 +134,7 @@ jobs:
       - name: Sleeping job 14 for 5 minutes
         run: |
           echo "Job 14 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 14 finished sleeping"
 
   job_15:
@@ -143,7 +143,7 @@ jobs:
       - name: Sleeping job 15 for 5 minutes
         run: |
           echo "Job 15 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 15 finished sleeping"
 
   job_16:
@@ -152,7 +152,7 @@ jobs:
       - name: Sleeping job 16 for 5 minutes
         run: |
           echo "Job 16 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 16 finished sleeping"
 
   job_17:
@@ -161,7 +161,7 @@ jobs:
       - name: Sleeping job 17 for 5 minutes
         run: |
           echo "Job 17 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 17 finished sleeping"
 
   job_18:
@@ -170,7 +170,7 @@ jobs:
       - name: Sleeping job 18 for 5 minutes
         run: |
           echo "Job 18 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 18 finished sleeping"
 
   job_19:
@@ -179,7 +179,7 @@ jobs:
       - name: Sleeping job 19 for 5 minutes
         run: |
           echo "Job 19 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 19 finished sleeping"
 
   job_20:
@@ -188,7 +188,7 @@ jobs:
       - name: Sleeping job 20 for 5 minutes
         run: |
           echo "Job 20 starting sleep for 300 seconds"
-          sleep 30
+          sleep 90
           echo "Job 20 finished sleeping"
 
   # job_21:
@@ -198,7 +198,7 @@ jobs:
   #     - name: Sleeping job 21 for 5 minutes
   #       run: |
   #         echo "Job 21 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 21 finished sleeping"
 
   # job_22:
@@ -208,7 +208,7 @@ jobs:
   #     - name: Sleeping job 22 for 5 minutes
   #       run: |
   #         echo "Job 22 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 22 finished sleeping"
 
   # # New 22 jobs with sequential dependencies
@@ -220,7 +220,7 @@ jobs:
   #     - name: Sleeping dependent job 23 for 5 minutes
   #       run: |
   #         echo "Dependent Job 23 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 23 finished sleeping"
 
   # job_24:
@@ -230,7 +230,7 @@ jobs:
   #     - name: Sleeping dependent job 24 for 5 minutes
   #       run: |
   #         echo "Dependent Job 24 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 24 finished sleeping"
 
   # job_25:
@@ -240,7 +240,7 @@ jobs:
   #     - name: Sleeping dependent job 25 for 5 minutes
   #       run: |
   #         echo "Dependent Job 25 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 25 finished sleeping"
 
   # job_26:
@@ -250,7 +250,7 @@ jobs:
   #     - name: Sleeping job 21 for 5 minutes
   #       run: |
   #         echo "Job 21 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 21 finished sleeping"
 
   # job_27:
@@ -260,7 +260,7 @@ jobs:
   #     - name: Sleeping job 22 for 5 minutes
   #       run: |
   #         echo "Job 22 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 22 finished sleeping"
 
   # # New 22 jobs with sequential dependencies
@@ -272,7 +272,7 @@ jobs:
   #     - name: Sleeping dependent job 23 for 5 minutes
   #       run: |
   #         echo "Dependent Job 23 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 23 finished sleeping"
 
   # job_29:
@@ -282,7 +282,7 @@ jobs:
   #     - name: Sleeping dependent job 24 for 5 minutes
   #       run: |
   #         echo "Dependent Job 24 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 24 finished sleeping"
 
   # job_30:
@@ -292,7 +292,7 @@ jobs:
   #     - name: Sleeping dependent job 25 for 5 minutes
   #       run: |
   #         echo "Dependent Job 25 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 25 finished sleeping"
 
   # job_31:
@@ -302,7 +302,7 @@ jobs:
   #     - name: Sleeping job 21 for 5 minutes
   #       run: |
   #         echo "Job 21 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 21 finished sleeping"
 
   # job_32:
@@ -312,7 +312,7 @@ jobs:
   #     - name: Sleeping job 22 for 5 minutes
   #       run: |
   #         echo "Job 22 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 22 finished sleeping"
 
   # # New 22 jobs with sequential dependencies
@@ -324,7 +324,7 @@ jobs:
   #     - name: Sleeping dependent job 23 for 5 minutes
   #       run: |
   #         echo "Dependent Job 23 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 23 finished sleeping"
 
   # job_34:
@@ -334,7 +334,7 @@ jobs:
   #     - name: Sleeping dependent job 24 for 5 minutes
   #       run: |
   #         echo "Dependent Job 24 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 24 finished sleeping"
 
   # job_35:
@@ -344,7 +344,7 @@ jobs:
   #     - name: Sleeping dependent job 25 for 5 minutes
   #       run: |
   #         echo "Dependent Job 25 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 25 finished sleeping"
 
   # job_36:
@@ -354,7 +354,7 @@ jobs:
   #     - name: Sleeping job 21 for 5 minutes
   #       run: |
   #         echo "Job 21 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 21 finished sleeping"
 
   # job_37:
@@ -364,7 +364,7 @@ jobs:
   #     - name: Sleeping job 22 for 5 minutes
   #       run: |
   #         echo "Job 22 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Job 22 finished sleeping"
 
   # # New 22 jobs with sequential dependencies
@@ -376,7 +376,7 @@ jobs:
   #     - name: Sleeping dependent job 23 for 5 minutes
   #       run: |
   #         echo "Dependent Job 23 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 23 finished sleeping"
 
   # job_39:
@@ -386,7 +386,7 @@ jobs:
   #     - name: Sleeping dependent job 24 for 5 minutes
   #       run: |
   #         echo "Dependent Job 24 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 24 finished sleeping"
 
   # job_40:
@@ -396,5 +396,5 @@ jobs:
   #     - name: Sleeping dependent job 25 for 5 minutes
   #       run: |
   #         echo "Dependent Job 25 starting sleep for 300 seconds"
-  #         sleep 30
+  #         sleep 90
   #         echo "Dependent Job 25 finished sleeping"

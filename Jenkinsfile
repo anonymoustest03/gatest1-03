@@ -1,5 +1,5 @@
 pipeline { 
-    // agent any
+    // agent any 
     agent {  
         docker {
             image 'ubuntu-with-git'

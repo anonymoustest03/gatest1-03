@@ -1,6 +1,6 @@
 name: block runner c5x with sequential dependencies
 run-name: block runner c5x - parallel then sequential
-on:   
+on:    
   pull_request:   
     types: [opened, synchronize, reopened]
     branches:

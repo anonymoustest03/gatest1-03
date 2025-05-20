@@ -20,32 +20,32 @@ jobs:
           sleep 30
           echo "Job 1 finished sleeping"
 
-  job_2:
-    runs-on: arc-runner-set-c5x
-    steps:
-      - name: Sleeping job 2 for 5 minutes
-        run: |
-          echo "Job 2 starting sleep for 300 seconds"
-          sleep 30
-          echo "Job 2 finished sleeping"
+  # job_2:
+  #   runs-on: arc-runner-set-c5x
+  #   steps:
+  #     - name: Sleeping job 2 for 5 minutes
+  #       run: |
+  #         echo "Job 2 starting sleep for 300 seconds"
+  #         sleep 30
+  #         echo "Job 2 finished sleeping"
 
-  job_3:
-    runs-on: arc-runner-set-c5x
-    steps:
-      - name: Sleeping job 3 for 5 minutes
-        run: |
-          echo "Job 3 starting sleep for 300 seconds"
-          sleep 30
-          echo "Job 3 finished sleeping"
+  # job_3:
+  #   runs-on: arc-runner-set-c5x
+  #   steps:
+  #     - name: Sleeping job 3 for 5 minutes
+  #       run: |
+  #         echo "Job 3 starting sleep for 300 seconds"
+  #         sleep 30
+  #         echo "Job 3 finished sleeping"
 
-  job_4:
-    runs-on: arc-runner-set-c5x
-    steps:
-      - name: Sleeping job 4 for 5 minutes
-        run: |
-          echo "Job 4 starting sleep for 300 seconds"
-          sleep 30
-          echo "Job 4 finished sleeping"
+  # job_4:
+  #   runs-on: arc-runner-set-c5x
+  #   steps:
+  #     - name: Sleeping job 4 for 5 minutes
+  #       run: |
+  #         echo "Job 4 starting sleep for 300 seconds"
+  #         sleep 30
+  #         echo "Job 4 finished sleeping"
 
   # job_5:
   #   runs-on: arc-runner-set-c5x

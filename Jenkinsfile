@@ -1,6 +1,6 @@
 pipeline { 
     // agent any 
-    agent {         
+    agent {          
         docker {
             image 'ubuntu-with-git'
             args '-u root'

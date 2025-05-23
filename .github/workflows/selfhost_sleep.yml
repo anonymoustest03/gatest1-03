@@ -1,4 +1,4 @@
-name: block runner c5x with sequential dependencies
+name: block runner c5x with sequential dependencies 
 run-name: block runner c5x - parallel then sequential 
 on: 
   pull_request:

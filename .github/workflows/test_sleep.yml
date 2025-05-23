@@ -1,7 +1,7 @@
 name: block runner c5x with sequential dependencies
 run-name: Automated update No.11 (2025-05-23 16:22:16)
 on:
-  pull_request:
+  pull_request: 
     types: [opened, synchronize, reopened]
     branches:
       - main

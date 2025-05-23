@@ -17,17 +17,17 @@ jobs:
       - name: Sleeping job 1 for 5 minutes
         run: |
           echo "Job 1 starting sleep for 300 seconds"
-          sleep 30
+          sleep 10
           echo "Job 1 finished sleeping"
 
-  job_2:
-    runs-on: ubuntu-latest #arc-runner-set-c5x
-    steps:
-      - name: Sleeping job 2 for 5 minutes
-        run: |
-          echo "Job 2 starting sleep for 300 seconds"
-          sleep 30
-          echo "Job 2 finished sleeping"
+  # job_2:
+  #   runs-on: ubuntu-latest #arc-runner-set-c5x
+  #   steps:
+  #     - name: Sleeping job 2 for 5 minutes
+  #       run: |
+  #         echo "Job 2 starting sleep for 300 seconds"
+  #         sleep 30
+  #         echo "Job 2 finished sleeping"
 
   # job_3:
   #   runs-on: ubuntu-latest #arc-runner-set-c5x

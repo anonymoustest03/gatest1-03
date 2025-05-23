@@ -1,0 +1,73 @@
+name: block runner c5x with sequential dependencies
+run-name: block runner c5x - parallel then sequential
+
+on: 
+  pull_request: 
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  mac_job_1: 
+    runs-on: macos-latest
+    steps:
+      - name: Sleep 45 seconds on mac_job_1
+        run: |
+          echo "mac_job_1 sleeping for 45 seconds"
+          sleep 45
+
+  mac_job_2: 
+    runs-on: macos-latest
+    steps:
+      - name: Sleep 45 seconds on mac_job_2
+        run: |
+          echo "mac_job_2 sleeping for 45 seconds"
+          sleep 45
+
+  mac_job_3: 
+    runs-on: macos-latest
+    steps:
+      - name: Sleep 45 seconds on mac_job_3
+        run: |
+          echo "mac_job_3 sleeping for 45 seconds"
+          sleep 45
+
+  mac_job_4: 
+    runs-on: macos-latest
+    steps:
+      - name: Sleep 45 seconds on mac_job_4
+        run: |
+          echo "mac_job_4 sleeping for 45 seconds"
+          sleep 45
+
+  mac_job_5: 
+    runs-on: macos-latest
+    steps:
+      - name: Sleep 45 seconds on mac_job_5
+        run: |
+          echo "mac_job_5 sleeping for 45 seconds"
+          sleep 45
+  mac_job_6: 
+    runs-on: macos-latest
+    steps:
+      - name: Sleep 45 seconds on mac_job_6
+        run: |
+          echo "mac_job_5 sleeping for 45 seconds"
+          sleep 45
+
+  ubuntu_job:
+    runs-on: ubuntu-latest
+    # needs:
+    #   - mac_job_1
+    #   - mac_job_2
+    #   - mac_job_3
+    #   - mac_job_4
+    #   - mac_job_5
+    steps:
+      - name: Ubuntu job after mac jobs
+        run: |
+          echo "All mac jobs completed. Running ubuntu_job."
+          sleep 45

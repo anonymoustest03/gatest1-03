@@ -11,8 +11,7 @@ parameters:
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   self-host-test:
-    docker:
-      - image: cimg/base:current
+    machine: true
     resource_class: aws-ec2-runner/micro
     steps:
       - run: 

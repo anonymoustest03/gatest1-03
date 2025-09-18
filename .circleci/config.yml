@@ -9,7 +9,16 @@ parameters:
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
-jobs:   
+jobs:
+  self-host-test:
+    docker:
+      - image: cimg/base:current
+    resource_class: aws-ec2-runner/micro
+    steps:
+      - run: 
+          command: |
+            sleep 5
+            echo "Hi I'm on a self hosted Container Runner!"
   sleep:
     # docker:
     #   - image: cimg/base:current
@@ -66,8 +75,10 @@ workflows:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>>
     jobs:
-      - sleep
+      # - sleep
       # - cpu-stress-test
+      - self-host-test
+      
 
   say-hello-workflow_from_fork: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.

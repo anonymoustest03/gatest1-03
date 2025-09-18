@@ -16,7 +16,7 @@ jobs:
     steps:
       - run: 
           command: |
-            sleep 60
+            sleep 120
             echo "Hi I'm on a self hosted Container Runner!"
   sleep:
     # docker:
@@ -76,10 +76,6 @@ workflows:
     jobs:
       # - sleep
       # - cpu-stress-test
-      - self-host-test
-      - self-host-test
-      - self-host-test
-      - self-host-test
       - self-host-test
       
 

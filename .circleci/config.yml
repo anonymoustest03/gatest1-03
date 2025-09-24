@@ -47,7 +47,7 @@ jobs:
       - checkout
       - run:
           name: "sleep a while for fork repo"
-          command: "sleep 30"
+          command: "sleep 31"
 
   cpu-stress-test:
     docker:

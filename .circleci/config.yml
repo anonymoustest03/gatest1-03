@@ -23,11 +23,11 @@ jobs:
               sleep 60
             done
   sleep:
-    docker:
-      - image: cimg/base:current
+    # docker:
+      # - image: cimg/base:current
     # resource_class: large
-    # macos:
-      # xcode: "14.2.0"
+    macos:
+      xcode: "14.2.0"
     resource_class: macos.m1.medium.gen1
     # Add steps to the job
     steps:

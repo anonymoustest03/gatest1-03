@@ -78,7 +78,7 @@ workflows:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>>
     jobs:
-      - sleep
+      - sleep_2
       # - cpu-stress-test
       # - self-host-test
       

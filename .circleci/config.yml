@@ -11,7 +11,7 @@ job_templates:
       - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 31"
+          command: "sleep 120"
 
   windows_sleep_job: &windows_sleep_job
     machine:
@@ -115,7 +115,7 @@ jobs:
   sleep_17:
     <<: *docker_sleep_job
   sleep_18:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_19:
     <<: *windows_sleep_job
   sleep_20:
@@ -213,8 +213,8 @@ workflows:
       - sleep_30
       - sleep_31
       - sleep_32
-      # - sleep_33
-      # - sleep_34
+      - sleep_33
+      - sleep_34
       # - sleep_35
       # - cpu-stress-test
       # - self-host-test

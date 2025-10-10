@@ -13,6 +13,16 @@ job_templates:
           name: "sleep a while"
           command: "sleep 31"
 
+  windows_sleep_job: &windows_sleep_job
+    machine:
+      image: windows-server-2022-gui:current # Specify a Windows image
+    resource_class: 'windows.medium' # Use the 'small' resource class for Windows
+    steps:
+      - checkout
+      - run:
+          name: "sleep a while on Windows"
+          command: "Start-Sleep -Seconds 31"
+
 parameters:
     temp:
         type: boolean
@@ -75,35 +85,35 @@ jobs:
 
   # Use the template to create jobs sleep_3 through sleep_32
   sleep_3:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_4:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_5:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_6:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_7:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_8:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_9:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_10:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_11:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_12:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_13:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_14:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_15:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_16:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_17:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_18:
     <<: *docker_sleep_job
   sleep_19:
@@ -133,6 +143,10 @@ jobs:
   sleep_31:
     <<: *docker_sleep_job
   sleep_32:
+    <<: *docker_sleep_job
+  sleep_33:
+    <<: *docker_sleep_job
+  sleep_34:
     <<: *docker_sleep_job
 
   cpu-stress-test:

@@ -21,7 +21,7 @@ job_templates:
       - checkout
       - run:
           name: "sleep a while on Windows"
-          command: sleep 60
+          command: sleep 120
 
 parameters:
     temp:
@@ -41,7 +41,7 @@ jobs:
             echo "Starting 6-hour process..."
             for i in $(seq 1 360); do
               echo "[Minute $i of 360] Process is still running..."
-              sleep 60
+              sleep 120
             done
   sleep:
     # docker:
@@ -85,35 +85,35 @@ jobs:
 
   # Use the template to create jobs sleep_3 through sleep_32
   sleep_3:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_4:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_5:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_6:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_7:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_8:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_9:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_10:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_11:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_12:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_13:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_14:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_15:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_16:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_17:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_18:
     <<: *windows_sleep_job
   sleep_19:
@@ -213,9 +213,9 @@ workflows:
       - sleep_30
       - sleep_31
       - sleep_32
-      - sleep_33
-      - sleep_34
-      - sleep_35
+      # - sleep_33
+      # - sleep_34
+      # - sleep_35
       # - cpu-stress-test
       # - self-host-test
       

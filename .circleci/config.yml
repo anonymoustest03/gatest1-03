@@ -2,6 +2,17 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1 
 
+job_templates:
+  docker_sleep_job: &docker_sleep_job
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: "sleep a while"
+          command: "sleep 31"
+
 parameters:
     temp:
         type: boolean
@@ -52,25 +63,77 @@ jobs:
           name: "sleep a while for fork repo"
           command: "sleep 31"
 
-  sleep_3:
-    docker:
-      - image: cimg/base:current
-    resource_class: small 
-    steps:
-      - checkout
-      - run:
-          name: "sleep a while for fork repo"
-          command: "sleep 31"
+  # sleep_3:
+  #   docker:
+  #     - image: cimg/base:current
+  #   resource_class: small 
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: "sleep a while for fork repo"
+  #         command: "sleep 31"
 
+  # Use the template to create jobs sleep_3 through sleep_32
+  sleep_3:
+    <<: *docker_sleep_job
   sleep_4:
-    docker:
-      - image: cimg/base:current
-    resource_class: small 
-    steps:
-      - checkout
-      - run:
-          name: "sleep a while for fork repo"
-          command: "sleep 31"
+    <<: *docker_sleep_job
+  sleep_5:
+    <<: *docker_sleep_job
+  sleep_6:
+    <<: *docker_sleep_job
+  sleep_7:
+    <<: *docker_sleep_job
+  sleep_8:
+    <<: *docker_sleep_job
+  sleep_9:
+    <<: *docker_sleep_job
+  sleep_10:
+    <<: *docker_sleep_job
+  sleep_11:
+    <<: *docker_sleep_job
+  sleep_12:
+    <<: *docker_sleep_job
+  sleep_13:
+    <<: *docker_sleep_job
+  sleep_14:
+    <<: *docker_sleep_job
+  sleep_15:
+    <<: *docker_sleep_job
+  sleep_16:
+    <<: *docker_sleep_job
+  sleep_17:
+    <<: *docker_sleep_job
+  sleep_18:
+    <<: *docker_sleep_job
+  sleep_19:
+    <<: *docker_sleep_job
+  sleep_20:
+    <<: *docker_sleep_job
+  sleep_21:
+    <<: *docker_sleep_job
+  sleep_22:
+    <<: *docker_sleep_job
+  sleep_23:
+    <<: *docker_sleep_job
+  sleep_24:
+    <<: *docker_sleep_job
+  sleep_25:
+    <<: *docker_sleep_job
+  sleep_26:
+    <<: *docker_sleep_job
+  sleep_27:
+    <<: *docker_sleep_job
+  sleep_28:
+    <<: *docker_sleep_job
+  sleep_29:
+    <<: *docker_sleep_job
+  sleep_30:
+    <<: *docker_sleep_job
+  sleep_31:
+    <<: *docker_sleep_job
+  sleep_32:
+    <<: *docker_sleep_job
 
   cpu-stress-test:
     docker:
@@ -106,23 +169,34 @@ workflows:
       # - sleep_2
       - sleep_3
       - sleep_4
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
-      # - sleep_3
+      - sleep_5
+      - sleep_6
+      - sleep_7
+      - sleep_8
+      - sleep_9
+      - sleep_10
+      - sleep_11
+      - sleep_12
+      - sleep_13
+      - sleep_14
+      - sleep_15
+      - sleep_16
+      - sleep_17
+      - sleep_18
+      - sleep_19
+      - sleep_20
+      - sleep_21
+      - sleep_22
+      - sleep_23
+      - sleep_24
+      - sleep_25
+      - sleep_26
+      - sleep_27
+      - sleep_28
+      - sleep_29
+      - sleep_30
+      - sleep_31
+      - sleep_32
       # - cpu-stress-test
       # - self-host-test
       

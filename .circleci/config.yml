@@ -56,11 +56,16 @@ jobs:
     docker:
       - image: cimg/base:current
     resource_class: small 
-    # resource_class: large
-    # Add steps to the job
-    # macos:
-    #   xcode: "14.2.0"
-    # resource_class: macos.m1.medium.gen1
+    steps:
+      - checkout
+      - run:
+          name: "sleep a while for fork repo"
+          command: "sleep 31"
+
+  sleep_4:
+    docker:
+      - image: cimg/base:current
+    resource_class: small 
     steps:
       - checkout
       - run:
@@ -100,7 +105,7 @@ workflows:
       - sleep
       # - sleep_2
       - sleep_3
-      - sleep_3
+      - sleep_4
       # - sleep_3
       # - sleep_3
       # - sleep_3

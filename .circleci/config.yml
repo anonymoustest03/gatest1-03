@@ -55,6 +55,7 @@ jobs:
   sleep_3:
     docker:
       - image: cimg/base:current
+    resource_class: small 
     # resource_class: large
     # Add steps to the job
     # macos:
@@ -69,7 +70,7 @@ jobs:
   cpu-stress-test:
     docker:
       - image: cimg/base:current
-      resource_class: small    
+    resource_class: small    
     steps:
       - checkout
       - run:

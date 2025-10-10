@@ -28,7 +28,7 @@ jobs:
     # resource_class: large
     macos:
       xcode: "14.2.0"
-    resource_class: macos.m1.medium.gen1
+    resource_class: medium
     # Add steps to the job
     steps:
       # Checkout the code as the first step.
@@ -44,7 +44,7 @@ jobs:
     # Add steps to the job
     macos:
       xcode: "14.2.0"
-    resource_class: macos.m1.medium.gen1
+    resource_class: medium
     steps:
       # Checkout the code as the first step.
       - checkout
@@ -61,7 +61,6 @@ jobs:
         #   xcode: "14.2.0"
         # resource_class: macos.m1.medium.gen1
         steps:
-          # Checkout the code as the first step.
           - checkout
           - run:
               name: "sleep a while for fork repo"
@@ -70,6 +69,7 @@ jobs:
   cpu-stress-test:
     docker:
       - image: cimg/base:current
+      resource_class: small    
     steps:
       - checkout
       - run:

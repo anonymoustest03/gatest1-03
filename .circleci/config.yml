@@ -21,7 +21,7 @@ job_templates:
       - checkout
       - run:
           name: "sleep a while on Windows"
-          command: "Start-Sleep -Seconds 31"
+          command: sleep 60
 
 parameters:
     temp:

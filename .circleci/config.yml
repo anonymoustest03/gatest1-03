@@ -115,39 +115,39 @@ jobs:
   sleep_17:
     <<: *windows_sleep_job
   sleep_18:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_19:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_20:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_21:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_22:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_23:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_24:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_25:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_26:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_27:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_28:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_29:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_30:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_31:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_32:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_33:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_34:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
 
   cpu-stress-test:
     docker:

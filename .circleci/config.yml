@@ -52,19 +52,19 @@ jobs:
           name: "sleep a while for fork repo"
           command: "sleep 31"
 
-    sleep_3:
-        docker:
-          - image: cimg/base:current
-        # resource_class: large
-        # Add steps to the job
-        # macos:
-        #   xcode: "14.2.0"
-        # resource_class: macos.m1.medium.gen1
-        steps:
-          - checkout
-          - run:
-              name: "sleep a while for fork repo"
-              command: "sleep 31"
+  sleep_3:
+    docker:
+      - image: cimg/base:current
+    # resource_class: large
+    # Add steps to the job
+    # macos:
+    #   xcode: "14.2.0"
+    # resource_class: macos.m1.medium.gen1
+    steps:
+      - checkout
+      - run:
+          name: "sleep a while for fork repo"
+          command: "sleep 31"
 
   cpu-stress-test:
     docker:

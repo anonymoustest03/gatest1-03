@@ -11,7 +11,7 @@ job_templates:
       - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 120"
+          command: "sleep 20"
 
   windows_sleep_job: &windows_sleep_job
     machine:

@@ -21,7 +21,7 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while on Windows"
-          command: sleep 10
+          command: sleep 1200
 
 parameters:
     temp:
@@ -69,7 +69,7 @@ jobs:
       # - checkout
       - run:
           name: "sleep for 1 minute"
-          command: "sleep 120"
+          command: "sleep 1200"
 
   sleep_2:
     # docker:
@@ -84,7 +84,7 @@ jobs:
       # - checkout
       - run:
           name: "sleep a while for fork repo"
-          command: "sleep 11"
+          command: "sleep 1200"
 
   # sleep_3:
   #   docker:
@@ -194,41 +194,41 @@ workflows:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>> 
     jobs:
-      # - sleep_0
+      - sleep_1
       - sleep_2
       - sleep_3
-      # - sleep_4
-      # - sleep_5
-      # - sleep_6
-      # - sleep_7
-      # - sleep_8
-      # - sleep_9
-      # - sleep_10
-      # - sleep_11
-      # - sleep_12
-      # - sleep_13
-      # - sleep_14
-      # - sleep_15
-      # - sleep_16
-      # - sleep_17
-      # - sleep_18
-      # - sleep_19
-      # - sleep_20
-      # - sleep_21
-      # - sleep_22
-      # - sleep_23
-      # - sleep_24
-      # - sleep_25
-      # - sleep_26
-      # - sleep_27
-      # - sleep_28
-      # - sleep_29
-      # - sleep_30
-      # - sleep_31
-      # - sleep_32
-      # - sleep_33
-      # - sleep_34
-      # - sleep_35
+      - sleep_4
+      - sleep_5
+      - sleep_6
+      - sleep_7
+      - sleep_8
+      - sleep_9
+      - sleep_10
+      - sleep_11
+      - sleep_12
+      - sleep_13
+      - sleep_14
+      - sleep_15
+      - sleep_16
+      - sleep_17
+      - sleep_18
+      - sleep_19
+      - sleep_20
+      - sleep_21
+      - sleep_22
+      - sleep_23
+      - sleep_24
+      - sleep_25
+      - sleep_26
+      - sleep_27
+      - sleep_28
+      - sleep_29
+      - sleep_30
+      - sleep_31
+      - sleep_32
+      - sleep_33
+      - sleep_34
+      - sleep_35
       # - cpu-stress-test
       # - self-host-test
       

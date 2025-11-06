@@ -43,6 +43,19 @@ jobs:
               echo "[Minute $i of 360] Process is still running..."
               sleep 120
             done
+
+  sleep_0:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    
+    # Add steps to the job
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      - run:
+          name: "sleep for 1 minute"
+          command: "sleep 10"
   sleep:
     # docker:
       # - image: cimg/base:current
@@ -56,7 +69,7 @@ jobs:
       - checkout
       - run:
           name: "sleep for 1 minute"
-          command: "sleep 60"
+          command: "sleep 120"
 
   sleep_2:
     # docker:
@@ -181,9 +194,9 @@ workflows:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>>
     jobs:
-      # - sleep
+      - sleep_0
       # - sleep_2
-      - sleep_3
+      # - sleep_3
       # - sleep_4
       # - sleep_5
       # - sleep_6
@@ -226,27 +239,39 @@ workflows:
             not:
                  equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
     jobs:
-      - sleep_3
-      
-      # - cpu-stress-test
-
-# workflows:
-#   say-hello-workflow:
-#     jobs:
-#       - sleep:
-#           filters:
-#             branches:
-#               ignore: /.*/
-#             pull_requests:
-#               only:
-#                 - /.*/
-#       - cpu-stress-test:
-#           filters:
-#             branches:
-#               ignore: /.*/
-#             pull_requests:
-#               only:
-#                 - /.*/
-
-
-
+      - sleep_0
+      # - sleep
+      # - sleep_2
+      # - sleep_3
+      # - sleep_4
+      # - sleep_5
+      # - sleep_6
+      # - sleep_7
+      # - sleep_8
+      # - sleep_9
+      # - sleep_10
+      # - sleep_11
+      # - sleep_12
+      # - sleep_13
+      # - sleep_14
+      # - sleep_15
+      # - sleep_16
+      # - sleep_17
+      # - sleep_18
+      # - sleep_19
+      # - sleep_20
+      # - sleep_21
+      # - sleep_22
+      # - sleep_23
+      # - sleep_24
+      # - sleep_25
+      # - sleep_26
+      # - sleep_27
+      # - sleep_28
+      # - sleep_29
+      # - sleep_30
+      # - sleep_31
+      # - sleep_32
+      # - sleep_33
+      # - sleep_34
+      # - sleep_35

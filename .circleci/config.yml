@@ -16,7 +16,7 @@ job_templates:
   windows_sleep_job: &windows_sleep_job
     machine:
       image: windows-server-2022-gui:current # Specify a Windows image
-    resource_class: 'windows.medium' # Use the 'small' resource class for Windows
+    resource_class: 'windows.large' # Use the 'small' resource class for Windows
     steps:
       # - checkout
       - run:

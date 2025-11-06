@@ -8,7 +8,7 @@ job_templates:
       - image: cimg/base:current
     resource_class: small
     steps:
-      - checkout
+      # - checkout
       - run:
           name: "sleep a while"
           command: "sleep 10"
@@ -18,7 +18,7 @@ job_templates:
       image: windows-server-2022-gui:current # Specify a Windows image
     resource_class: 'windows.medium' # Use the 'small' resource class for Windows
     steps:
-      - checkout
+      # - checkout
       - run:
           name: "sleep a while on Windows"
           command: sleep 120
@@ -52,7 +52,7 @@ jobs:
     # Add steps to the job
     steps:
       # Checkout the code as the first step.
-      - checkout
+      # - checkout
       - run:
           name: "sleep for 1 minute"
           command: "sleep 10"
@@ -66,7 +66,7 @@ jobs:
     # Add steps to the job
     steps:
       # Checkout the code as the first step.
-      - checkout
+      # - checkout
       - run:
           name: "sleep for 1 minute"
           command: "sleep 120"
@@ -81,7 +81,7 @@ jobs:
     resource_class: macos.m1.medium.gen1
     steps:
       # Checkout the code as the first step.
-      - checkout
+      # - checkout
       - run:
           name: "sleep a while for fork repo"
           command: "sleep 31"

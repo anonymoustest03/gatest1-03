@@ -56,7 +56,7 @@ jobs:
       - run:
           name: "sleep for 1 minute"
           command: "sleep 10"
-  sleep:
+  sleep_1:
     # docker:
       # - image: cimg/base:current
     # resource_class: large

@@ -21,7 +21,7 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while on Windows"
-          command: sleep 1200
+          command: sleep 12
 
 parameters:
     temp:
@@ -195,8 +195,8 @@ workflows:
       #      - <<pipeline.parameters.nightly>>
     jobs:
       # - sleep_0
-      - sleep
-      - sleep_2
+      # - sleep
+      # - sleep_2
       # - sleep_3
       # - sleep_4
       # - sleep_5
@@ -226,10 +226,10 @@ workflows:
       # - sleep_29
       # - sleep_30
       - sleep_31
-      - sleep_32
-      - sleep_33
-      - sleep_34
-      - sleep_35
+      # - sleep_32
+      # - sleep_33
+      # - sleep_34
+      # - sleep_35
       # - cpu-stress-test
       # - self-host-test
       

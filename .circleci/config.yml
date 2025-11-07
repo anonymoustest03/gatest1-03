@@ -11,7 +11,7 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 10"
+          command: "sleep 120"
 
   windows_sleep_job: &windows_sleep_job
     machine:
@@ -206,12 +206,12 @@ workflows:
       #      - <<pipeline.parameters.nightly>>
     jobs:
       # - sleep_0
-      - sleep
+      # - sleep
       # - sleep_2
       # - sleep_3
       # - sleep_4
-      # - sleep_5
-      # - sleep_6
+      - sleep_5
+      - sleep_6
       # - sleep_7
       # - sleep_8
       # - sleep_9

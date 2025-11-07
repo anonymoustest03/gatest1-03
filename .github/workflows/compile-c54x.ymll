@@ -1,6 +1,6 @@
 name: Compile Job c54x
    
-on: 
+on:
   push: 
     branches:  
       - main 

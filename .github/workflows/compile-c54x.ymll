@@ -2,7 +2,7 @@ name: Compile Job c54x
    
 on:
   push: 
-    branches:  
+    branches:   
       - main 
   # pull_request:
   #   branches: 

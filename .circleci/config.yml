@@ -18,7 +18,7 @@ job_templates:
               sleep 60
             done
 
-  windows_sleep_job: &docker_sleep_job
+  windows_sleep_job: &windows_sleep_job
     machine:
       image: windows-server-2022-gui:current # Specify a Windows image
     resource_class: 'windows.large' # Use the 'small' resource class for Windows

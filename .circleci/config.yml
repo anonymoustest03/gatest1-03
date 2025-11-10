@@ -6,14 +6,19 @@ job_templates:
   docker_sleep_job: &docker_sleep_job
     docker:
       - image: cimg/base:current
-    resource_class: small
+    resource_class: large
     steps:
       # - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 10"
+          command: |
+            echo "Starting 6-hour process..."
+            for i in $(seq 1 360); do
+              echo "[Minute $i of 360] Process is still running..."
+              sleep 60
+            done
 
-  windows_sleep_job: &windows_sleep_job
+  docker_sleep_job: &docker_sleep_job
     machine:
       image: windows-server-2022-gui:current # Specify a Windows image
     resource_class: 'windows.large' # Use the 'small' resource class for Windows
@@ -98,71 +103,71 @@ jobs:
 
   # Use the template to create jobs sleep_3 through sleep_32
   sleep_3:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_4:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_5:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_6:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_7:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_8:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_9:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_10:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_11:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_12:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_13:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_14:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_15:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_16:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_17:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_18:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_19:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_20:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_21:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_22:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_23:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_24:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_25:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_26:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_27:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_28:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_29:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_30:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_31:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_32:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_33:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_34:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_35:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
 
   cpu-stress-test:
     docker:
@@ -239,39 +244,39 @@ workflows:
             not:
                  equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
     jobs:
-      - sleep_0
+      # - sleep_0
       # - sleep
       # - sleep_2
-      # - sleep_3
-      # - sleep_4
-      # - sleep_5
-      # - sleep_6
-      # - sleep_7
-      # - sleep_8
-      # - sleep_9
-      # - sleep_10
-      # - sleep_11
-      # - sleep_12
-      # - sleep_13
-      # - sleep_14
-      # - sleep_15
-      # - sleep_16
-      # - sleep_17
-      # - sleep_18
-      # - sleep_19
-      # - sleep_20
-      # - sleep_21
-      # - sleep_22
-      # - sleep_23
-      # - sleep_24
-      # - sleep_25
-      # - sleep_26
-      # - sleep_27
-      # - sleep_28
-      # - sleep_29
-      # - sleep_30
-      # - sleep_31
-      # - sleep_32
-      # - sleep_33
-      # - sleep_34
-      # - sleep_35
+      - sleep_3
+      - sleep_4
+      - sleep_5
+      - sleep_6
+      - sleep_7
+      - sleep_8
+      - sleep_9
+      - sleep_10
+      - sleep_11
+      - sleep_12
+      - sleep_13
+      - sleep_14
+      - sleep_15
+      - sleep_16
+      - sleep_17
+      - sleep_18
+      - sleep_19
+      - sleep_20
+      - sleep_21
+      - sleep_22
+      - sleep_23
+      - sleep_24
+      - sleep_25
+      - sleep_26
+      - sleep_27
+      - sleep_28
+      - sleep_29
+      - sleep_30
+      - sleep_31
+      - sleep_32
+      - sleep_33
+      - sleep_34
+      - sleep_35

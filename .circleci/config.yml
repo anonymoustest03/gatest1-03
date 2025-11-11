@@ -26,6 +26,7 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while on Windows"
+          shell: powershell.exe
           command: |
             echo "Starting 60-minute process..."
             for ($i = 1; $i -le 60; $i++) {
@@ -79,7 +80,13 @@ jobs:
       # - checkout
       - run:
           name: "sleep for 1 minute"
-          command: "sleep 1200"
+          command: |
+            echo "Starting 60-minute process..."
+            # This is BASH syntax
+            for i in $(seq 1 60); do
+              echo "[Minute $i of 60] Process is still running..."
+              sleep 60
+            done
 
   sleep_2:
     # docker:
@@ -94,7 +101,13 @@ jobs:
       # - checkout
       - run:
           name: "sleep a while for fork repo"
-          command: "sleep 1200"
+          command: |
+            echo "Starting 60-minute process..."
+            # This is BASH syntax
+            for i in $(seq 1 60); do
+              echo "[Minute $i of 60] Process is still running..."
+              sleep 60
+            done
 
   # sleep_3:
   #   docker:

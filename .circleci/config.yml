@@ -26,7 +26,12 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while on Windows"
-          command: sleep 1200
+          command: |
+            echo "Starting 60-minute process..."
+            for ($i = 1; $i -le 60; $i++) {
+              echo "[Minute $i of 60] Process is still running..."
+              Start-Sleep -Seconds 60
+            }
 
 parameters:
     temp:
@@ -103,71 +108,71 @@ jobs:
 
   # Use the template to create jobs sleep_3 through sleep_32
   sleep_3:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_4:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_5:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_6:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_7:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_8:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_9:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_10:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_11:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_12:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_13:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_14:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_15:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_16:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_17:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_18:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_19:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_20:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_21:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_22:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_23:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_24:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_25:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_26:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_27:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_28:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_29:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_30:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_31:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_32:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_33:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_34:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
   sleep_35:
-    <<: *docker_sleep_job
+    <<: *windows_sleep_job
 
   cpu-stress-test:
     docker:
@@ -199,8 +204,8 @@ workflows:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       #      - <<pipeline.parameters.nightly>> 
     jobs:
-      # - sleep_1
-      # - sleep_2
+      - sleep_1
+      - sleep_2
       - sleep_3
       - sleep_4
       - sleep_5

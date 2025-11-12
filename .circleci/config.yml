@@ -206,10 +206,10 @@ workflows:
       #      - <<pipeline.parameters.nightly>>
     jobs:
       # - sleep_0
-      - sleep
+      # - sleep
       # - sleep_2
       # - sleep_3
-      # - sleep_4
+      - sleep_4
       # - sleep_5
       # - sleep_6
       # - sleep_7

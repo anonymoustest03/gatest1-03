@@ -13,10 +13,10 @@ job_templates:
           name: "sleep a while"
           command: |
             echo "Starting 6-hour process..."
-            for i in $(seq 1 360); do
-              echo "[Minute $i of 360] Process is still running..."
-              sleep 60
-            done
+            # for i in $(seq 1 360); do
+            #   echo "[Minute $i of 360] Process is still running..."
+            #   sleep 60
+            # done
 
   windows_sleep_job: &windows_sleep_job
     machine:
@@ -220,35 +220,35 @@ workflows:
       # - sleep_1
       # - sleep_2
       - sleep_3
-      - sleep_4
-      - sleep_5
-      - sleep_6
-      - sleep_7
-      - sleep_8
-      - sleep_9
-      - sleep_10
-      - sleep_11
-      - sleep_12
-      - sleep_13
-      - sleep_14
-      - sleep_15
-      - sleep_16
-      - sleep_17
-      - sleep_18
-      - sleep_19
-      - sleep_20
-      - sleep_21
-      - sleep_22
-      - sleep_23
-      - sleep_24
-      - sleep_25
-      - sleep_26
-      - sleep_27
-      - sleep_28
-      - sleep_29
-      - sleep_30
-      - sleep_31
-      - sleep_32
+      # - sleep_4
+      # - sleep_5
+      # - sleep_6
+      # - sleep_7
+      # - sleep_8
+      # - sleep_9
+      # - sleep_10
+      # - sleep_11
+      # - sleep_12
+      # - sleep_13
+      # - sleep_14
+      # - sleep_15
+      # - sleep_16
+      # - sleep_17
+      # - sleep_18
+      # - sleep_19
+      # - sleep_20
+      # - sleep_21
+      # - sleep_22
+      # - sleep_23
+      # - sleep_24
+      # - sleep_25
+      # - sleep_26
+      # - sleep_27
+      # - sleep_28
+      # - sleep_29
+      # - sleep_30
+      # - sleep_31
+      # - sleep_32
       # - sleep_33
       # - sleep_34
       # - sleep_35

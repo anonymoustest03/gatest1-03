@@ -105,7 +105,13 @@ jobs:
       - checkout
       - run:
           name: "sleep a while for fork repo"
-          command: "sleep 31"
+          # command: "sleep 31"
+          command: |
+            echo "Starting 6-hour process..."
+            for i in $(seq 1 360); do
+              echo "[Minute $i of 360] Process is still running..."
+              sleep 120
+            done
 
   # Use the template to create jobs sleep_3 through sleep_32
   sleep_3:

@@ -13,7 +13,7 @@ job_templates:
           name: "sleep a while"
           command: |
             echo "Starting 6-hour process..."
-            for i in $(seq 1 3); do
+            for i in $(seq 1 1); do
               echo "[Minute $i of 360] Process is still running..."
               sleep 60
             done

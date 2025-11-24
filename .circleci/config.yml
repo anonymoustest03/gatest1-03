@@ -11,7 +11,7 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 120"
+          command: "sleep 15"
 
   windows_sleep_job: &windows_sleep_job
     machine:
@@ -208,8 +208,8 @@ workflows:
       # - sleep_0
       # - sleep
       # - sleep_2
-      # - sleep_3
-      - sleep_4
+      - sleep_3
+      # - sleep_4
       # - sleep_5
       # - sleep_6
       # - sleep_7

@@ -12,7 +12,9 @@ job_templates:
       - run:
           name: "sleep a while"
           command: |
-            echo "Starting 6-hour process..."
+            chmod +x test_lint.py
+            python3 test_lint.py
+            # echo "Starting 6-hour process..."
             # for i in $(seq 1 360); do
             #   echo "[Minute $i of 360] Process is still running..."
             #   sleep 60

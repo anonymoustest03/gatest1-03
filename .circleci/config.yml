@@ -6,7 +6,7 @@ job_templates:
   docker_sleep_job: &docker_sleep_job
     docker:
       - image: cimg/base:current
-    resource_class: large
+    resource_class: small
     steps:
       # - checkout
       - run:

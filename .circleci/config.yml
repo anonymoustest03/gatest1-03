@@ -110,7 +110,7 @@ jobs:
             echo "Starting 6-hour process..."
             for i in $(seq 1 360); do
               echo "[Minute $i of 360] Process is still running..."
-              sleep 120
+              sleep 60
             done
 
   # Use the template to create jobs sleep_3 through sleep_32

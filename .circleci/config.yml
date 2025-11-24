@@ -1,7 +1,7 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine. 
-# See: https://circleci.com/docs/configuration-reference  
-version: 2.1 
-
+# Use the latest 2.1 version of CircleCI pipeline process engine.          
+# See: https://circleci.com/docs/configuration-reference           
+version: 2.1     
+ 
 job_templates:
   docker_sleep_job: &docker_sleep_job
     docker:
@@ -11,7 +11,12 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while"
-          command: "sleep 10"
+          command: |
+            echo "Starting 6-hour process..."
+            # for i in $(seq 1 360); do
+            #   echo "[Minute $i of 360] Process is still running..."
+            #   sleep 60
+            # done
 
   windows_sleep_job: &windows_sleep_job
     machine:
@@ -21,7 +26,13 @@ job_templates:
       # - checkout
       - run:
           name: "sleep a while on Windows"
-          command: sleep 12
+          shell: powershell.exe
+          command: |
+            echo "Starting 60-minute process..."
+            for ($i = 1; $i -le 60; $i++) {
+              echo "[Minute $i of 60] Process is still running..."
+              Start-Sleep -Seconds 60
+            }
 
 parameters:
     temp:
@@ -55,9 +66,8 @@ jobs:
       # - checkout
       - run:
           name: "sleep for 1 minute"
-          command: "sleep 1200"
-          
-  sleep:
+          command: "sleep 10"
+  sleep_1:
     # docker:
       # - image: cimg/base:current
     # resource_class: large
@@ -71,16 +81,12 @@ jobs:
       - run:
           name: "sleep for 1 minute"
           command: |
-            NUM_LOOPS=24
-            
-            echo "Starting loop. Will run $NUM_LOOPS times (5 min each)."
-
-            for i in $(seq 1 $NUM_LOOPS); do
-              echo "Loop $i/$NUM_LOOPS: Job is running... $(date)"
-              sleep 300 # 5 minutes
+            echo "Starting 60-minute process..."
+            # This is BASH syntax
+            for i in $(seq 1 60); do
+              echo "[Minute $i of 60] Process is still running..."
+              sleep 60
             done
-
-            echo "Loop finished."
 
   sleep_2:
     # docker:
@@ -95,23 +101,23 @@ jobs:
       # - checkout
       - run:
           name: "sleep a while for fork repo"
-          command: "sleep 31"
-
-  sleep_3_default:
-    docker:
-      - image: cimg/base:current
-    resource_class: small 
-    steps:
-      - checkout
-      - run:
-          name: "sleep a while for fork repo"
-          # command: "sleep 31"
           command: |
-            echo "Starting 6-hour process..."
-            for i in $(seq 1 360); do
-              echo "[Minute $i of 360] Process is still running..."
-              sleep 120
+            echo "Starting 60-minute process..."
+            # This is BASH syntax
+            for i in $(seq 1 60); do
+              echo "[Minute $i of 60] Process is still running..."
+              sleep 60
             done
+
+  # sleep_3:
+  #   docker:
+  #     - image: cimg/base:current
+  #   resource_class: small 
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: "sleep a while for fork repo"
+  #         command: "sleep 31"
 
   # Use the template to create jobs sleep_3 through sleep_32
   sleep_3:
@@ -147,39 +153,39 @@ jobs:
   sleep_18:
     <<: *docker_sleep_job
   sleep_19:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_20:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_21:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_22:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_23:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_24:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_25:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_26:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_27:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_28:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_29:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_30:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_31:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_32:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_33:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_34:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
   sleep_35:
-    <<: *windows_sleep_job
+    <<: *docker_sleep_job
 
   cpu-stress-test:
     docker:
@@ -203,19 +209,17 @@ jobs:
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
 
-  say-hello-workflow_orig: # This is the name of the workflow, feel free to change it to better match your workflow.
+  say-hello-workflow: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     when:
       equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
       # and:
       #      - equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
-      #      - <<pipeline.parameters.nightly>>
+      #      - <<pipeline.parameters.nightly>> 
     jobs:
-      - sleep_3_default
-      # - sleep_0
-      # - sleep
+      # - sleep_1
       # - sleep_2
-      # - sleep_3
+      - sleep_3
       # - sleep_4
       # - sleep_5
       # - sleep_6
@@ -253,44 +257,44 @@ workflows:
       
 
   say-hello-workflow_from_fork: # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run.
+    # Inside the workflow, you define the jobs you want to run. 
     when:
             not:
                  equal: [<<pipeline.project.git_url>>, https://github.com/anonymoustest03/gatest1-03]
     jobs:
-      - sleep_0
+      # - sleep_0
       # - sleep
       # - sleep_2
-      # - sleep_3
-      # - sleep_4
-      # - sleep_5
-      # - sleep_6
-      # - sleep_7
-      # - sleep_8
-      # - sleep_9
-      # - sleep_10
-      # - sleep_11
-      # - sleep_12
-      # - sleep_13
-      # - sleep_14
-      # - sleep_15
-      # - sleep_16
-      # - sleep_17
-      # - sleep_18
-      # - sleep_19
-      # - sleep_20
-      # - sleep_21
-      # - sleep_22
-      # - sleep_23
-      # - sleep_24
-      # - sleep_25
-      # - sleep_26
-      # - sleep_27
-      # - sleep_28
-      # - sleep_29
-      # - sleep_30
-      # - sleep_31
-      # - sleep_32
-      # - sleep_33
-      # - sleep_34
-      # - sleep_35
+      - sleep_3
+      - sleep_4
+      - sleep_5
+      - sleep_6
+      - sleep_7
+      - sleep_8
+      - sleep_9
+      - sleep_10
+      - sleep_11
+      - sleep_12
+      - sleep_13
+      - sleep_14
+      - sleep_15
+      - sleep_16
+      - sleep_17
+      - sleep_18
+      - sleep_19
+      - sleep_20
+      - sleep_21
+      - sleep_22
+      - sleep_23
+      - sleep_24
+      - sleep_25
+      - sleep_26
+      - sleep_27
+      - sleep_28
+      - sleep_29
+      - sleep_30
+      - sleep_31
+      - sleep_32
+      - sleep_33
+      - sleep_34
+      - sleep_35
